@@ -15,15 +15,16 @@
 ***Place_ID(PK)*, Address, Start_Date, End_Date**, el lugar es la localizacion donde se llevara a cabo el servicio
 
 ## vehiculo
-***Car_ID(PK)*, Start_Date, End_Date, Car_Desc**, un auto es un vehiculo usado por un empleado o varios empleados para transportar herramientas y llevar a cabo servicios.
+***Car_ID(PK)*, Start_Date, End_Date, Car_, un auto es un vehiculo usado por un empleado o varios empleados para transportar herramientas y llevar a cabo servicios.
 ## herramienta
 ***Tool_ID(PK)*, Brand, Name, Description, Price**.una herramienta es un utensilio que sera usado por un empleado o  varios empleados que seran usados en el lugar donde se llevan a cabo los servicios.
 
 # Relaciones
-* Empleado recibe pago; Cardinality: 1..N; Participation: Total, Total
- * Empleado asignado a vehiculo Cardinality: N..1; Participation: Total, Total 
- * vehiculo que  contiene herramientas; Cardinality: 1..N; Participation: Total, Total
-  * auto asignado a lugar; Cardinality: 1..1; Participation: Total, Total 
-  * lugar pertenciente a cliente; Cardinality: N..1; Participation: Partial, Total 
-  * servicio adicional dado a lugar; Cardinality: N..1; Participation: Partial, Total 
-  * ingreso obtenido por cliente; Cardinality: N..1; Participation: Total, Total
+* Empleado recibe pago; un empleado puede recibir muchos pagos :  1 - N
+ * Empleado asignado a vehiculo; un empleado o varios empleados pueden ser asignados a un vehiculo :  N - 1
+ * vehiculo que  contiene herramientas; una o varias herramientas son asignadas a un vehiculo : N - 1
+  * vehiculo asignado a lugar; un vehiculo es asignado a un lugar : 1 - 1
+  * lugar pertenciente a cliente;   1  - 1  
+  * servicio adicional dado a luga : ardinality: un servicio adicional o varios servicios son dados a un lugar: N - 1
+  * ingreso obtenido por cliente: un ingreso o varios ingresos son obtenidos por un cliente N -1 
+
