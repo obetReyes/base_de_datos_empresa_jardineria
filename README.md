@@ -6,7 +6,7 @@
 ## person (ED)
 ***Client_ID(PK)*, Name, role, Surname, phone Number, Email**, una persona es el individuo que es un cliente o  un empleado
 
-## roles (ED)
+## role (ED)
 ***roles_ID(PK)*, name, description**, un rol es lo que es asignado a un individuo puede ser un cliente o un empleado
 
 ## Client(EP)
@@ -29,6 +29,8 @@
 ***Service_ID(PK)*, Price, Description, PLACE_ID**,un servicio adicional no se especifica en el contrato pero se lleva a cabo dentro del lugar
 
 
+
+
 ## place(ED)
 ***Place_ID(PK)*, Address, Start_Date, End_Date**, el lugar es la localizacion donde se llevara a cabo el servicio
 
@@ -47,6 +49,7 @@
   * ingreso obtenido por cliente: un ingreso o varios ingresos son obtenidos por un cliente N -1 
 
 # Reglas
+
 ### income 
 - Crear el registro de un ingreso.
 - Leer el registro de un ingreso dependiendo de un cliente.
@@ -54,16 +57,74 @@
 - actualizar los datos de un ingreso.
 - eliminar un ingreso si es incorrecto.
 
+### person 
+- crear el registro de una persona
+- actualizar una persona
+- eliminar los datos de una persona
+- leer los datos de varias personas
 
-## user
+### role 
+- leer un rol
+- leer varios roles
+- asignar un rol a una persona
+- crear un rol
+- actualizar un rol
+- eliminar un rol
 
-## client
-- crea
-- leer el registro de un cliente o varios clientes
-- actualizar un cliente 
-- eliminar un cliente
+### client  
+- leer una persona con el rol de cliente
+- leer varias personas con el rol de cliente
 
-2.  Leer el registro de una(s) carrera(s) dada una condición en particular.
-3.  Leer todos los registros de la entidad carreras.
-4.  Actualizar los datos de una carrera dada una condición en particular.
-5.  Eliminar los datos de una carrera dada una condición en particular.
+### employee
+- leer una persona con el rol o roles de empleado
+- leer varias personas con el rol de empleado
+
+### spend
+- crear el  registro de un gasto
+- actualizar un gasto
+- eliminar un gasto
+-  leer un gasto
+- leer varios gasto
+
+### category
+
+- crear un registro de category
+- actualizar una category
+- leer una category
+- leer varias categories
+
+### payment
+
+- crear el registro de un pago asignado a una persona con el rol de empleado
+- leer un pago
+- leer varios pagos
+- actualizar un pago
+- eliminaar un pago
+
+### contract 
+
+- crear un registro de contrato
+- leer un contrato
+- leer varios contratos
+- actualizar un contrato
+
+### aditional_service
+
+- crear un registro de  un servicio adiconal
+- leer un servicio adicional
+- leer varios servicios adicionales
+- actualizr un servicio adicional
+
+### place
+
+- crear un registro de un lugar
+- leer un lugar
+- leer varios lugares
+- eliminar un lugar
+
+###  vehicle
+
+- crear  el registor de un vehiculo 
+-  leer un vehiculo
+- leer varios vehiculos
+- eliminar un vehiculo
